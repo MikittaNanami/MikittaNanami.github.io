@@ -116,6 +116,21 @@ blockquote {
     font-style: italic;
 }
 
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+img {
+    max-width: 80%;
+    margin-top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: none; /* le immagini partono nascoste */
+        }
+
 /* Media queries per responsività */
 @media screen and (max-width: 768px) {
     body {
@@ -158,6 +173,14 @@ blockquote {
     Amatrice era conosciuta per la sua architettura storica e per il famoso piatto tradizionale, l'amatriciana. Tuttavia, in pochi minuti, gran parte del centro storico fu distrutto. L’intervento della Protezione Civile, dei Vigili del Fuoco e di molte organizzazioni di volontariato fu immediato, ma la devastazione era tale da richiedere lunghi anni di ricostruzione.
 </p>
 
+<div>
+   <img id="immagine1" src="immagine1.png" alt="Prima immagine">
+   <img id="immagine2" src="immagine2.png" alt="Seconda immagine">
+</div>
+	
+<button id="bottone1">Prima</button>
+<button id="bottone2">Dopo</button>
+	
 <p>
     Da un punto di vista geologico, il terremoto è stato provocato da un movimento lungo una faglia appartenente al sistema appenninico. Il sisma ha causato uno spostamento della crosta terrestre di diversi centimetri. Alcune aree si sono abbassate, mentre altre si sono sollevate. Questo tipo di evento modifica la morfologia del territorio e può avere conseguenze anche sui corsi d'acqua, sulle sorgenti naturali e sulla stabilità del suolo. Si sono verificate numerose frane, in particolare nelle zone collinari, che hanno reso difficile l’accesso ad alcune aree sin dai primi momenti dopo la scossa.
 </p>
@@ -170,6 +193,15 @@ blockquote {
     Inoltre, la fase di ricostruzione, che ha comportato il movimento di mezzi pesanti, cantieri aperti per mesi (e in alcuni casi anni), ha inevitabilmente portato a un incremento temporaneo dell’inquinamento acustico e atmosferico, in particolare dovuto al traffico e all'uso di macchinari da cantiere. Tuttavia, si tratta di un inquinamento limitato nel tempo e controllato da normative ambientali.
 </p>
 
+
+<div>
+   <img id="streetview1" src="streetview1.jpg" alt="Prima Streetview">
+   <img id="streetview2" src="streetview2.jpg" alt="Seconda Streetview">
+</div>
+	
+<button id="bottone3">Prima</button>
+<button id="bottone4">Dopo</button>
+	
 <p>
     In conclusione, il terremoto di Amatrice del 2016 è stato uno degli eventi sismici più gravi degli ultimi decenni in Italia. Ha lasciato un segno profondo nella memoria collettiva e ha aperto nuove riflessioni sull'importanza della prevenzione sismica, della qualità dell’edilizia e della protezione del territorio. Le sue conseguenze geologiche sono ancora oggetto di studio, ma è chiaro che la ricostruzione deve sempre tenere conto non solo della sicurezza delle persone, ma anche della tutela dell’ambiente e del paesaggio.
 </p>
@@ -178,5 +210,38 @@ blockquote {
     Realizzato da Ardelean Giulia Maria e Labbate Annalisa
 </footer>
 
+<script>
+	
+document.addEventListener("DOMContentLoaded", function() {
+    const img1 = document.getElementById("immagine1");
+    const img2 = document.getElementById("immagine2");
+	const img3 = document.getElementById("streetview1");
+	const img4 = document.getElementById("streetview2");
+
+    document.getElementById("bottone1").addEventListener("click", function() {
+        img1.style.display = "block";
+        img2.style.display = "none";
+    });
+
+    document.getElementById("bottone2").addEventListener("click", function() {
+        img1.style.display = "none";
+        img2.style.display = "block";
+    });
+	
+    document.getElementById("bottone3").addEventListener("click", function() {
+        img3.style.display = "none";
+        img4.style.display = "block";
+    });
+
+    document.getElementById("bottone4").addEventListener("click", function() {
+        img3.style.display = "block";
+        img4.style.display = "none";
+    });
+	
+	
+});
+	
+</script>
+	
 </body>
 </html>
