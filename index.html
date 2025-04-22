@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -30,6 +32,118 @@
             font-size: 0.9em;
             color: #777;
         }
+		* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #222;
+    line-height: 1.8;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 16px;
+}
+
+/* Titolo principale */
+h1 {
+    color: #b22222;
+    text-align: center;
+    margin: 40px 0 30px;
+    font-size: 2.2em;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragrafi */
+p {
+    margin-bottom: 20px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* Primo paragrafo con stile speciale */
+p:first-of-type::first-letter {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #b22222;
+    float: left;
+    padding-right: 8px;
+    line-height: 0.9;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+/* Link styling */
+a {
+    color: #b22222;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #7a0000;
+    text-decoration: underline;
+}
+
+/* Container per potenziali immagini o contenuti extra */
+.content-container {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile per potenziali citazioni o informazioni in evidenza */
+blockquote {
+    border-left: 4px solid #b22222;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: rgba(178, 34, 34, 0.05);
+    font-style: italic;
+}
+
+/* Media queries per responsività */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+        font-size: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+        margin: 25px 0 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        margin: 20px 0 15px;
+    }
+    
+    p:first-of-type::first-letter {
+        font-size: 2em;
+    }
+}
     </style>
 </head>
 <body>
