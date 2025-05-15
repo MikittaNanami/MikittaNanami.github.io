@@ -128,8 +128,16 @@ img {
     margin-top: 20px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    display: none; /* le immagini partono nascoste */
+    
         }
+.hidden{
+	max-width: 80%;
+    	margin-top: 20px;
+    	border: 2px solid #ccc;
+    	border-radius: 10px;
+	display: none; /* le immagini partono nascoste */
+}
+
 
 /* Media queries per responsività */
 @media screen and (max-width: 768px) {
@@ -170,16 +178,12 @@ img {
 </p>
 
 <p>
-    Amatrice era conosciuta per la sua architettura storica e per il famoso piatto tradizionale, l'amatriciana. Tuttavia, in pochi minuti, gran parte del centro storico fu distrutto. L’intervento della Protezione Civile, dei Vigili del Fuoco e di molte organizzazioni di volontariato fu immediato, ma la devastazione era tale da richiedere lunghi anni di ricostruzione.
+    Amatrice era conosciuta per la sua architettura storica e per il famoso piatto tradizionale, l'amatriciana. In pochi minuti, gran parte del centro storico fu distrutto. L’intervento della Protezione Civile, dei Vigili del Fuoco e di molte organizzazioni di volontariato fu immediato, ma la devastazione era tale da richiedere lunghi anni di ricostruzione.
 </p>
 
-<div>
-   <img id="immagine1" src="immagine1.png" alt="Prima immagine">
-   <img id="immagine2" src="immagine2.png" alt="Seconda immagine">
-</div>
-	
-<button id="bottone1">Prima</button>
-<button id="bottone2">Dopo</button>
+
+<img id="Before_and_After" src="Before_and_After.jpg" alt="Il prima e il dopo in vista satellitare">
+
 	
 <p>
     Da un punto di vista geologico, il terremoto è stato provocato da un movimento lungo una faglia appartenente al sistema appenninico. Il sisma ha causato uno spostamento della crosta terrestre di diversi centimetri. Alcune aree si sono abbassate, mentre altre si sono sollevate. Questo tipo di evento modifica la morfologia del territorio e può avere conseguenze anche sui corsi d'acqua, sulle sorgenti naturali e sulla stabilità del suolo. Si sono verificate numerose frane, in particolare nelle zone collinari, che hanno reso difficile l’accesso ad alcune aree sin dai primi momenti dopo la scossa.
@@ -195,8 +199,8 @@ img {
 
 
 <div>
-   <img id="streetview1" src="streetview1.jpg" alt="Prima Streetview">
-   <img id="streetview2" src="streetview2.jpg" alt="Seconda Streetview">
+   <img class="hidden" id="streetview1" src="streetview1.jpg" alt="Prima Streetview">
+   <img class="hidden" id="streetview2" src="streetview2.jpg" alt="Seconda Streetview">
 </div>
 	
 <button id="bottone3">Prima</button>
@@ -213,20 +217,11 @@ img {
 <script>
 	
 document.addEventListener("DOMContentLoaded", function() {
-    const img1 = document.getElementById("immagine1");
-    const img2 = document.getElementById("immagine2");
+    
 	const img3 = document.getElementById("streetview1");
 	const img4 = document.getElementById("streetview2");
 
-    document.getElementById("bottone1").addEventListener("click", function() {
-        img1.style.display = "block";
-        img2.style.display = "none";
-    });
-
-    document.getElementById("bottone2").addEventListener("click", function() {
-        img1.style.display = "none";
-        img2.style.display = "block";
-    });
+   
 	
     document.getElementById("bottone3").addEventListener("click", function() {
         img3.style.display = "block";
