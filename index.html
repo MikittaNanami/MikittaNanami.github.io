@@ -107,21 +107,6 @@ a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Stile per potenziali citazioni o informazioni in evidenza */
-blockquote {
-    border-left: 4px solid #b22222;
-    padding: 10px 20px;
-    margin: 20px 0;
-    background-color: rgba(178, 34, 34, 0.05);
-    font-style: italic;
-}
-
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
 img {
     max-width: 80%;
@@ -257,7 +242,7 @@ img {
     <img id="immagine" src="streetview1.jpg" alt="Galleria">
     <button class="button next" onclick="cambiaImmagine(1)">→</button>
     <div class="caption" id="didascalia">Immagine di una strada principale nel 2008.</div>
-  </div>
+ </div>
 		
 <p>
     In conclusione, il terremoto di Amatrice del 2016 è stato uno degli eventi sismici più gravi degli ultimi decenni in Italia. Ha lasciato un segno profondo nella memoria collettiva e ha aperto nuove riflessioni sull'importanza della prevenzione sismica, della qualità dell’edilizia e della protezione del territorio. Le sue conseguenze geologiche sono ancora oggetto di studio, ma è chiaro che la ricostruzione deve sempre tenere conto non solo della sicurezza delle persone, ma anche della tutela dell’ambiente e del paesaggio.
@@ -305,6 +290,7 @@ const immagini = [
       const didascalia = document.getElementById("didascalia");
       immagine.src = immagini[indice].src;
       didascalia.textContent = immagini[indice].descrizione;
+    }
 </script>
 	
 </body>
